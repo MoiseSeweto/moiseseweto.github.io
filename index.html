@@ -34,14 +34,31 @@
       font-weight: bold;
     }
     main {
-      max-width: 900px;
+      max-width: 1200px;
       margin: auto;
       padding: 2rem;
     }
-    section {
-      margin-bottom: 2rem;
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      align-items: center;
     }
-    h1, h2 {
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .section img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 1rem;
+      border-radius: 8px;
+    }
+    .section-content {
+      flex: 1;
+      padding: 1rem;
+    }
+    h2 {
       color: #0d6efd;
     }
     a.button {
@@ -59,14 +76,10 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-    img.cover {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-bottom: 5px solid #0d6efd;
-    }
-    ul {
-      padding-left: 1.2rem;
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -85,43 +98,58 @@
     </nav>
   </header>
 
-  <img src="campus_cover.png" alt="Campus du Digital" class="cover">
-
   <main>
-    <section>
-      <h2><i class="fas fa-graduation-cap"></i> Bienvenue au Campus du Digital</h2>
-      <p>Le Campus du Digital est une école de formation spécialisée dans les métiers du numérique et de la tech. Nous formons les talents de demain à travers des parcours innovants, pratiques et adaptés aux besoins du marché.</p>
-    </section>
 
-    <section>
-      <h2><i class="fas fa-lightbulb"></i> Nos valeurs</h2>
-      <ul>
-        <li><strong>Excellence :</strong> des formateurs experts issus du terrain.</li>
-        <li><strong>Innovation :</strong> des méthodes d’apprentissage modernes et immersives.</li>
-        <li><strong>Accessibilité :</strong> des formations ouvertes à tous, avec ou sans diplôme.</li>
-      </ul>
-    </section>
+    <div class="section">
+      <img src="images/accueil.jpg" alt="Bienvenue au Campus du Digital">
+      <div class="section-content">
+        <h2><i class="fas fa-graduation-cap"></i> Bienvenue au Campus du Digital</h2>
+        <p>Le Campus du Digital est une école de formation spécialisée dans les métiers du numérique et de la tech. Nous formons les talents de demain à travers des parcours innovants, pratiques et adaptés aux besoins du marché.</p>
+      </div>
+    </div>
 
-    <section>
-      <h2><i class="fas fa-check-circle"></i> Pourquoi choisir le Campus du Digital ?</h2>
-      <p>
-        ✔️ Programmes courts et professionnalisants<br>
-        ✔️ Accompagnement individuel à l’insertion professionnelle<br>
-        ✔️ Réseau d’entreprises partenaires dans le digital
-      </p>
-    </section>
+    <div class="section">
+      <img src="images/valeurs.jpg" alt="Nos valeurs">
+      <div class="section-content">
+        <h2><i class="fas fa-lightbulb"></i> Nos valeurs</h2>
+        <ul>
+          <li><strong>Excellence :</strong> des formateurs experts issus du terrain.</li>
+          <li><strong>Innovation :</strong> des méthodes d’apprentissage modernes et immersives.</li>
+          <li><strong>Accessibilité :</strong> des formations ouvertes à tous, avec ou sans diplôme.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section>
-      <h2><i class="fas fa-laptop-code"></i> Nos domaines de formation</h2>
-      <p>Développement web, marketing digital, design UX/UI, gestion de projet, data, cybersécurité…</p>
-      <a href="formations.html" class="button">Voir toutes les formations</a>
-    </section>
+    <div class="section">
+      <img src="images/choisir.jpg" alt="Pourquoi choisir le Campus du Digital">
+      <div class="section-content">
+        <h2><i class="fas fa-check-circle"></i> Pourquoi choisir le Campus du Digital ?</h2>
+        <p>
+          ✔️ Programmes courts et professionnalisants<br>
+          ✔️ Accompagnement individuel à l’insertion professionnelle<br>
+          ✔️ Réseau d’entreprises partenaires dans le digital
+        </p>
+      </div>
+    </div>
 
-    <section>
-      <h2><i class="fas fa-users"></i> Rejoignez-nous !</h2>
-      <p>Prêt·e à transformer votre avenir professionnel ? Le Campus du Digital vous accompagne à chaque étape.</p>
-      <a href="inscription.html" class="button">Inscrivez-vous maintenant</a>
-    </section>
+    <div class="section">
+      <img src="images/domaines.jpg" alt="Nos domaines de formation">
+      <div class="section-content">
+        <h2><i class="fas fa-laptop-code"></i> Nos domaines de formation</h2>
+        <p>Développement web, marketing digital, design UX/UI, gestion de projet, data, cybersécurité…</p>
+        <a href="formations.html" class="button">Voir toutes les formations</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="images/rejoignez.jpg" alt="Rejoignez-nous">
+      <div class="section-content">
+        <h2><i class="fas fa-users"></i> Rejoignez-nous !</h2>
+        <p>Prêt·e à transformer votre avenir professionnel ? Le Campus du Digital vous accompagne à chaque étape.</p>
+        <a href="inscription.html" class="button">Inscrivez-vous maintenant</a>
+      </div>
+    </div>
+
   </main>
 
   <footer>
